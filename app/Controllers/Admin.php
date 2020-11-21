@@ -145,4 +145,8 @@ class Admin extends BaseController
         $data['bayar'] = $PSuhatModel->getSelesai();
         return view('admin\riwayat', $data);
     }
+
+    public function logs()
+    {
+    }
 }
