@@ -32,7 +32,7 @@
                     <div class="card-footer">Klik Disini</div>
                 </a>
             </div>
-            <div class="card text-white bg-warning mb-3 mr-4" style="max-width: 18rem;">
+            <div class="card text-white bg-danger mb-3 mr-4" style="max-width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Riwayat Candi</h5>
                     <p class="card-text">Berisi Data Riwayat Seluruh Pembayaran Candi Yang Telah Selesai.</p>
