@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/templateuser'); ?>
 
 <?= $this->section('content'); ?>
 
@@ -6,54 +6,68 @@
     <div class="alert alert-success" role="alert">
         <?= session()->getFlashdata('pesan'); ?>
     </div>
-    <<?php endif; ?> <h3>Data Pembayaran Homestay Suhat</h3>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">ID Bayar</th>
-                    <th scope="col">No Kamar</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Check-In</th>
-                    <th scope="col">Check-Out</th>
-                    <th scope="col">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php $no = 1; ?>
-                <?php foreach ($bayar as $byr) : ?>
-                    <tr>
-                        <td scope="row"><?php echo $no++; ?></td>
-                        <td><?php echo $byr['id_bayar']; ?></td>
-                        <td><?php echo $byr['no_kamar']; ?></td>
-                        <td><?php echo $byr['nama']; ?></td>
-                        <td><?php echo $byr['check_in']; ?></td>
-                        <td><?php echo $byr['check_out']; ?></td>
-                        <td>
-                            <a href="/admin/detail/<?= $byr['id_bayar']; ?>">
-                                <button type="button" class="btn btn-info">Detail Pembayaran</button>
-                            </a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#formBayar">
-            Tambah Data Booking
-        </button>
+    <<?php endif; ?> <h1>
+        <center>Soekarno Hatta Indah Kost & Homestay</center>
+        </h1>
+
+        <!-- Caraosel Type 1 -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img/suhat/kamar/img_1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/suhat/kamar/img_2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/suhat/kamar/img_4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <br>
+        <center>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#formBayar">
+                Booking Kamar
+            </button>
+        </center>
 
         <!-- Modal -->
         <div class="modal fade" id="formBayar" tabindex="-1" aria-labelledby="judulBayar" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="judulBayar">Tambah Data Booking</h5>
+                        <h5 class="modal-title" id="judulBayar">Booking Kamar</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="/admin/tambah" method="post">
+                        <form action="/suhat/tambah" method="post">
                             <?= csrf_field(); ?>
                             <div class="form-group">
                                 <label for="nama">Nama Customer</label>

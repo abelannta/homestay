@@ -8,44 +8,45 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/suhat/style.css">
+
+    <?= $this->renderSection('header'); ?>
 </head>
 
 <body>
 
-
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar">
             <div class="p-4 pt-5">
-                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/img/logo.jpg);"></a>
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(img/logo.jpg);"></a>
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Homestay Suhat</a>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Homestay</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li>
-                                <a href="/admin/suhat">Pembayaran</a>
+                                <a href="Page_KamarSHT.php">Soekarno Hatta Indah Kost & Homestay</a>
                             </li>
                             <li>
-                                <a href="/admin/riwayat">Riwayat Pembayaran</a>
+                                <a href="Page_KamarCND.php">Guest House Candi Panggung</a>
                             </li>
                         </ul>
                     </li>
                     <li class="active">
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Homestay Candi</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <a href="#contactSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Contact</a>
+                        <ul class="collapse list-unstyled" id="contactSubmenu">
                             <li>
-                                <a href="/admin/candi">Pembayaran</a>
+                                <a>Admin 1: 081333362998</a>
                             </li>
                             <li>
-                                <a href="#">Riwayat Pembayaran</a>
+                                <a>Admin 2: 081333210304</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="/admin/logs">Logs</a>
+                        <a href="#">Bookingku</a>
                     </li>
                     <li>
-                        <a href="/admin/contact">Contact</a>
+                        <a href="#">About</a>
                     </li>
                 </ul>
 
@@ -68,11 +69,11 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/admin">Home</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Profile_Member/Page_Profile.php">Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/admin/contact">Log Out</a>
+                                <a class="nav-link" href="../Log_Out/Log_Out.php">Log Out</a>
                             </li>
                         </ul>
                     </div>
