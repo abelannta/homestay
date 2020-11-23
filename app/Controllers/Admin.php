@@ -56,6 +56,14 @@ class Admin extends BaseController
         return view('admin\contact', $data);
     }
 
+    public function logs()
+    {
+        $data = [
+            'title' => 'Logs | Admin Homestay'
+        ];
+        return view('admin\logs', $data);
+    }
+
     public function detail($id_bayar)
     {
         $PSuhatModel = new \App\Models\PSuhatModel();
@@ -114,7 +122,7 @@ class Admin extends BaseController
         $PSuhatModel->delete($id_bayar);
         $BookingKamar->delete($id_bayar);
         session()->setFlashdata('pesan', 'Data berhasil dihapus');
-        return redirect()->to('/admin/suhat');
+        return redirect()->to('/admin/riwayat');
     }
 
     public function verifikasi($id_bayar)
@@ -144,9 +152,5 @@ class Admin extends BaseController
         $PSuhatModel = new \App\Models\PSuhatModel();
         $data['bayar'] = $PSuhatModel->getSelesai();
         return view('admin\riwayat', $data);
-    }
-
-    public function logs()
-    {
     }
 }
