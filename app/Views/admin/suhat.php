@@ -41,6 +41,7 @@
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#formBayar">
             Tambah Data Booking
         </button>
+        <a class="btn btn-danger" href="/admin/print"><i class="fa fa-print"></i> Print</a>
 
         <!-- Modal -->
         <div class="modal fade" id="formBayar" tabindex="-1" aria-labelledby="judulBayar" aria-hidden="true">

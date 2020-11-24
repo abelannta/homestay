@@ -153,4 +153,16 @@ class Admin extends BaseController
         $data['bayar'] = $PSuhatModel->getSelesai();
         return view('admin\riwayat', $data);
     }
+
+    public function print()
+    {
+        $data = [
+            'title' => 'Print | Admin Homestay'
+        ];
+
+        $PSuhatModel = new \App\Models\PSuhatModel();
+        $data['bayar'] = $PSuhatModel->getBooking();
+
+        return view('/admin/print', $data);
+    }
 }
