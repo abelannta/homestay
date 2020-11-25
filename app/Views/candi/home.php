@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 
 <center>
-    <h2 class="mb-4">Soekarno Hatta Indah Kost & Homestay</h2>
+    <h2 class="mb-4">Guest House Candi Panggung</h2>
 </center>
 <section class="projects-section bg-light" id="project">
     <div class="container">
@@ -73,7 +73,7 @@
         </div>
         <br />
         <center>
-            <a href="suhat/kamar">
+            <a href="candi/kamar">
                 <button type="button" class="btn btn-primary btn-lg">Booking Now</button>
             </a>
         </center>

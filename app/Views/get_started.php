@@ -106,7 +106,9 @@
 								<p class="mb-0 text-white-50"> Lawang dikenal sebagai kota peristirahatan sejak zaman penjajahan Belanda. Karena itu tidak mengherankan bila sampai saat ini masih banyak ditemui bangunan kuno bergaya Belanda di Lawang.Merupakan perbatasan kota malang.Cocok bagi anda yang ingin segera beristirahat setelah sampai di kabupaten malang.</p>
 								<hr class="d-none d-lg-block mb-0 ml-0" />
 								<br>
-								<button class="btn btn-primary" name="candi">Lihat</button>
+								<a href="/candi">
+									<button class="btn btn-primary" name="candi">Lihat</button>
+								</a>
 							</div>
 						</div>
 					</div>

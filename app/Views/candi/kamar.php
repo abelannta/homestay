@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 <h1>
-    <center>Soekarno Hatta Indah Kost & Homestay</center>
+    <center>Guest House Candi Panggung</center>
 </h1>
 
 <!-- Caraosel Type 1 -->
@@ -15,63 +15,55 @@
         <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="6"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="7"></li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/img/suhat/kamar/ruang_tamu.jpeg" class="d-block w-100" alt="...">
+            <img src="/img/candi/kamar/awal.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Ruang Tamu</h5>
-                <p>Ruang tamu yang terlihat elegan dan minimalis.</p>
+                <h5>Guest House</h5>
+                <p>Guest house murah tetapi berkelas.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/img/suhat/kamar/koridor_lt2.jpeg" class="d-block w-100" alt="...">
+            <img src="/img/candi/kamar/depan.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Koridor Lantai 2</h5>
-                <p>Kamar-kamar yang berjejer rapi di sepanjang koridor.</p>
+                <h5>Halaman Depan</h5>
+                <p>Halaman depan yang terawat memmbuat nyaman untuk dilihat.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/img/suhat/kamar/teras_lt2.jpeg" class="d-block w-100" alt="...">
+            <img src="/img/candi/kamar/fasilitas.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Teras Lantai 2</h5>
-                <p>Teras yang terlihat elegan dan berhadapan dengan pemandangan yang indah.</p>
+                <h5>Fasilitas</h5>
+                <p>Fasilitas yang memuaskan hanya dengan harga yang terjangkau.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/img/suhat/kamar/kmr_type1.jpeg" class="d-block w-100" alt="...">
+            <img src="/img/candi/kamar/kmr2.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Kamar Type 1</h5>
-                <p>Kamar type 1 sudah dilengkapi AC.</p>
+                <h5>Kamar No.2</h5>
+                <p>Kamar luas yang dilengkapi kasur besar yang nyaman.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/img/suhat/kamar/bed_type1.jpeg" class="d-block w-100" alt="...">
+            <img src="/img/candi/kamar/kmr3.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Bed Type 1</h5>
-                <p>Pada type 1, bednya menggunakan bed queen size.</p>
+                <h5>Kamar No.3</h5>
+                <p>Kamar single size ditujukan untuk anda yang berpergian sendiri.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/img/suhat/kamar/kmr_type2.jpeg" class="d-block w-100" alt="...">
+            <img src="/img/candi/kamar/kmr4.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Kamar Type 2</h5>
-                <p>Kamar type 2 sudah dilengkapi Kipas Angin.</p>
+                <h5>Kamar No.4</h5>
+                <p>Kamar luas yang dilengkapi dengan queen size bed.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/img/suhat/kamar/bed_type2.jpeg" class="d-block w-100" alt="...">
+            <img src="/img/candi/kamar/kmr5.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Bed Type 2</h5>
-                <p>Pada type 2, bednya menggunakan bed single size.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="/img/suhat/kamar/km.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Kamar Mandi</h5>
-                <p>Terdapat kamar mandi dalam yang menggunakan shower dan kloset duduk.</p>
+                <h5>Kamar No.5</h5>
+                <p>Kamar minimalis dengan bed single size yang nyaman.</p>
             </div>
         </div>
     </div>
