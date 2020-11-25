@@ -95,8 +95,7 @@
                         <div id="collapseOne" class="collapse" aria-labelledby="jumlahkamar" data-parent="#accordionExample">
                             <div class="card-body">
                                 <ul>
-                                    <li>Type 1 = 5/5 kamar tersedia</li>
-                                    <li>Type 2 = 11/11 kamar tersedia</li>
+                                    <li>4/4 kamar tersedia</li>
                                 </ul>
                             </div>
                         </div>
@@ -133,14 +132,14 @@
                         <div id="collapseFive" class="collapse" aria-labelledby="harga" data-parent="#accordionExample">
                             <div class="card-body">
                                 <ul>
-                                    <b>Kamar 1 :</b>
-                                    <li>175,000/malam</li>
-                                    <li>1,750,000/bulan untuk 1 orang (putra)</li>
-                                    <li>2,000,000/bulan untuk 2 orang (pasutri sah)</li>
-                                    <b>Type 2 :</b>
-                                    <li>125,000/malam</li>
-                                    <li>1,500,000/bulan untuk 1 orang (putra)</li>
-                                    <li>1,800,000/bulan untuk 2 orang (pasutri)</li>
+                                    <b>Kamar No.2 :</b>
+                                    <li>120,000/malam</li>
+                                    <b>Kamar No.3 :</b>
+                                    <li>100,000/malam</li>
+                                    <b>Kamar No.4 :</b>
+                                    <li>120,000/malam</li>
+                                    <b>Kamar No.5 :</b>
+                                    <li>90,000/malam</li>
                                 </ul>
                             </div>
                         </div>
