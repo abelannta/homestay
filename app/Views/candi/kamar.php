@@ -112,39 +112,12 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="fasilitas" data-parent="#accordionExample">
                             <div class="card-body">
                                 <ul>
-                                    <li>Type 1 (AC), Type 2 (Kipas Angin)</li>
-                                    <li>TV Led</li>
-                                    <li>Type 1 (Spring bed queen size), Type 2 (Spring bed single size)</li>
-                                    <li>Meja kursi</li>
-                                    <li>Lemari pakaian, cermin panjang</li>
-                                    <li>Kamar mandi dalam (kloset duduk, shower, ember, gayung)</li>
-                                    <li>Wadah handuk</li>
-                                    <li>Tempat sampah</li>
-                                    <li>Free pembersihan kamar dan penggantian sprei bedcover per 2 minggu</li>
-                                    <li>Free sarapan tiap hari Jumat</li>
-                                    <li>Kamar dilengkapi beranda yang menghubungkan kamar tidur dengan kamar mandi dalam</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="fasilitasbersama">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Fasilitas Bersama
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="fasilitasbersama" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <ul>
-                                    <li>Ruang setrika</li>
-                                    <li>Dapur dan kulkas di tiap lantai</li>
-                                    <li>Ruang tamu</li>
-                                    <li>CCTV 24 jam</li>
-                                    <li>Penjaga kos</li>
-                                    <li>Ruang jemuran</li>
-                                    <li>Parkir motor dan mobil</li>
+                                    <li>Wifi</li>
+                                    <li>Kamar mandi dalam</li>
+                                    <li>Dapur bersama</li>
+                                    <li>Parkir mobil dan motor</li>
+                                    <li>Kipas angin</li>
+                                    <li>Televisi</li>
                                 </ul>
                             </div>
                         </div>
@@ -152,15 +125,15 @@
                     <div class="card">
                         <div class="card-header" id="harga">
                             <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                     Harga
                                 </button>
                             </h2>
                         </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="harga" data-parent="#accordionExample">
+                        <div id="collapseFive" class="collapse" aria-labelledby="harga" data-parent="#accordionExample">
                             <div class="card-body">
                                 <ul>
-                                    <b>Type 1 :</b>
+                                    <b>Kamar 1 :</b>
                                     <li>175,000/malam</li>
                                     <li>1,750,000/bulan untuk 1 orang (putra)</li>
                                     <li>2,000,000/bulan untuk 2 orang (pasutri sah)</li>
@@ -175,12 +148,12 @@
                     <div class="card">
                         <div class="card-header" id="sistem">
                             <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     Sistem
                                 </button>
                             </h2>
                         </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="sistem" data-parent="#accordionExample">
+                        <div id="collapseFour" class="collapse" aria-labelledby="sistem" data-parent="#accordionExample">
                             <div class="card-body">
                                 <ul>
                                     <li>Check in mulai jam 1 siang</li>
