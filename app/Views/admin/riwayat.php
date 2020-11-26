@@ -48,32 +48,34 @@
                             <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#formDelete">Delete</button>
                         </td>
                     </tr>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="formDelete" tabindex="-1" aria-labelledby="judulDelete" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Verifikasi Pembayaran</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Apa anda yakin untuk verifikasi pembayaran ?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                    <form action="/admin/detail/<?= $byr['id_bayar']; ?>" method="post">
+                                        <?= csrf_field(); ?>
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <?php endforeach; ?>
             </tbody>
         </table>
 
-        <!-- Modal -->
-        <div class="modal fade" id="formDelete" tabindex="-1" aria-labelledby="judulDelete" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Verifikasi Pembayaran</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Apa anda yakin untuk verifikasi pembayaran ?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                        <form action="/admin/detail/<?= $byr['id_bayar']; ?>" method="post">
-                            <?= csrf_field(); ?>
-                            <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <?= $this->endSection(); ?>
