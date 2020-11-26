@@ -7,6 +7,15 @@
         <?= session()->getFlashdata('pesan'); ?>
     </div>
     <<?php endif; ?> <h3>Riwayat Pembayaran Homestay Suhat</h3>
+
+        <form action="" method="post">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Masukkan keyword pencarian..." name="keyword">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit" name="submit">Cari</button>
+                </div>
+            </div>
+        </form>
         <table class="table table-bordered">
             <thead>
                 <tr>
