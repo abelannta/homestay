@@ -146,11 +146,18 @@ class Admin extends BaseController
         //session();
         $data = [
             'title' => 'Suhat | Admin Homestay',
-            'validation' => \Config\Services::validation()
         ];
-
         $PSuhatModel = new \App\Models\PSuhatModel();
-        $data['bayar'] = $PSuhatModel->getSelesai();
+        $keyword = $this->request->getVar('keyword');
+
+        if ($keyword) {
+            $query = $PSuhatModel->getSearch($keyword);
+        } else {
+            $query = $PSuhatModel->getSelesai();
+        }
+
+
+        $data['bayar'] = $query;
         return view('admin\riwayat', $data);
     }
 

@@ -27,6 +27,15 @@ class PSuhatModel extends Model
             ->get()->getResultArray();
     }
 
+    public function getSearch($keyword)
+    {
+        return $this->db->table('bayar')
+            ->join('booking_kamar', 'bayar.id_bayar=booking_kamar.id_bayar')
+            ->where('bayar.kondisi', "Selesai")
+            ->like('nama', $keyword)
+            ->get()->getResultArray();
+    }
+
     public function getIdByr($id_bayar = false)
     {
         if ($id_bayar == false) {
