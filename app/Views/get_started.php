@@ -31,6 +31,7 @@
 					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Tentang Kami</a></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#project">List</a></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Kontak Kami</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?= base_url('logout'); ?>">Logout</a></li>
 				</ul>
 			</div>
 		</div>

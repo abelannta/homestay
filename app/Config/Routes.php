@@ -31,11 +31,13 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+$routes->get('/', 'Admin::index', ['filter' => 'role:admin']);
 $routes->get('/', 'Home::index');
-$routes->get('/admin', 'Admin::index');
-$routes->get('/admin/verifikasi/(:segment)', 'Admin::verifikasi/$1');
-$routes->delete('/admin/detail/(:num)', 'Admin::delete/$1');
-$routes->get('/admin/detail/(:any)', 'Admin::detail/$1');
+
+$routes->get('/admin', 'Admin::index', ['filter' => 'role:admin']);
+$routes->get('/admin/verifikasi/(:segment)', 'Admin::verifikasi/$1', ['filter' => 'role:admin']);
+$routes->delete('/admin/detail/(:num)', 'Admin::delete/$1', ['filter' => 'role:admin']);
+$routes->get('/admin/detail/(:any)', 'Admin::detail/$1', ['filter' => 'role:admin']);
 
 
 /**

@@ -72,7 +72,7 @@
                                 <a class="nav-link" href="/admin">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/admin/contact">Log Out</a>
+                                <a class="nav-link" href="<?= base_url('logout'); ?>">Log Out</a>
                             </li>
                         </ul>
                     </div>
