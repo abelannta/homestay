@@ -23,12 +23,6 @@
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>">
                                     </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user <?php if (session('errors.alamat')) : ?>is-invalid<?php endif ?>" name="alamat" placeholder="Address" value="<?= old('alamat') ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" class="form-control form-control-user <?php if (session('errors.no_telp')) : ?>is-invalid<?php endif ?>" name="no_telp" placeholder="Phone Number" value="<?= old('no_telp') ?>">
-                                    </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <input type="password" class="form-control form-control-user <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" name="password" placeholder="<?= lang('Auth.password') ?>" autocomplete="off">

@@ -76,7 +76,7 @@
                                 <a class="nav-link" href="../Profile_Member/Page_Profile.php">Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../Log_Out/Log_Out.php">Log Out</a>
+                                <a class="nav-link" href="<?= base_url('logout'); ?>">Log Out</a>
                             </li>
                         </ul>
                     </div>

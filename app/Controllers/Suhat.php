@@ -28,9 +28,9 @@ class Suhat extends BaseController
     {
         //validasi
         if (!$this->validate([
-            'nama' => 'required|alpha_space',
-            'alamat' => 'required',
-            'no_telp' => 'required|decimal',
+            'nama'      => 'required|alpha_space',
+            'alamat'    => 'required',
+            'no_telp'   => 'required|decimal',
         ])) {
             $validation = \Config\Services::validation();
             return redirect()->to('/suhat/bayar')->withInput()->with('validation', $validation);
@@ -44,7 +44,6 @@ class Suhat extends BaseController
             'alamat' => $this->request->getVar('alamat'),
             'no_telp' => $this->request->getVar('no_telp'),
             'pembayaran' => $this->request->getVar('pembayaran'),
-            'kupon' => $this->request->getVar('kupon'),
             'status' => $this->request->getVar('status')
         ]);
 
@@ -56,6 +55,6 @@ class Suhat extends BaseController
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
 
-        return redirect()->to('/');
+        return redirect()->to('/suhat/kamar');
     }
 }
