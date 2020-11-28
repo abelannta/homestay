@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        #table>tbody>tr>td {
+            vertical-align: middle;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,7 +50,7 @@
                         <a href="/admin/logs">Logs</a>
                     </li>
                     <li>
-                        <a href="/admin/contact">Contact</a>
+                        <a href="/admin/contact">Keluhan</a>
                     </li>
                 </ul>
 

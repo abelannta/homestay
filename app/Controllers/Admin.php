@@ -38,22 +38,15 @@ class Admin extends BaseController
 
     public function contact()
     {
+        $Kontak = new \App\Models\KontakModel();
         $data = [
-            'title' => 'Contact | Admin Homestay',
-            'alamat' => [
-                [
-                    'nama' => 'Homestay Suhat',
-                    'alamat' => 'Jl. Soekarno Hatta no.14',
-                    'kota' => 'Malang'
-                ],
-                [
-                    'nama' => 'Homestay Candi',
-                    'alamat' => 'Jl. Candi no.14',
-                    'kota' => 'Malang'
-                ]
-            ]
+            'title' => 'Keluhan | Admin Homestay',
+            'kontak' => $Kontak->findAll()
         ];
-        return view('admin\contact', $data);
+
+
+
+        return view('/admin/contact', $data);
     }
 
     public function logs()

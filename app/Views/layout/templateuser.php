@@ -46,6 +46,9 @@
                         <a href="#">Bookingku</a>
                     </li>
                     <li>
+                        <a data-toggle="modal" data-target="#formContact" href="#">Contact Us</a>
+                    </li>
+                    <li>
                         <a href="#">About</a>
                     </li>
                 </ul>
@@ -82,6 +85,57 @@
                     </div>
                 </div>
             </nav>
+
+            <!-- Modal Contact Us -->
+            <div class="modal fade" id="formContact" tabindex="-1" aria-labelledby="ContactUs" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <form action="/kontak/tambah" method="post">
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label for="nama">Nama</label>
+                                                <input type="text" class="form-control" id="nama" name="nama" autofocus value="<?= user()->username; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="email" class="form-control" id="email" name="email" autofocus value="<?= user()->email; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label for="no_telp">No. Telepon</label>
+                                                <input type="number" class="form-control" id="no_telp" name="no_telp" autofocus>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Pesan</label>
+                                        <textarea class="form-control" id="pesan" name="pesan" rows="8"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <button type="submit" class="btn btn-primary">Kirim</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
 
 
             <?= $this->renderSection('content'); ?>
