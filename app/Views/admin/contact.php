@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 
 
-<h1>Daftar Contact</h1>
+<h1>Daftar Keluhan</h1>
 <center>
     <table class="table table-bordered" style="table-layout: fixed; width: 100%" id="table">
         <thead>

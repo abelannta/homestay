@@ -92,7 +92,6 @@ class Admin extends BaseController
             'alamat' => $this->request->getVar('alamat'),
             'no_telp' => $this->request->getVar('no_telp'),
             'pembayaran' => $this->request->getVar('pembayaran'),
-            'kupon' => $this->request->getVar('kupon'),
             'status' => $this->request->getVar('status')
         ]);
 

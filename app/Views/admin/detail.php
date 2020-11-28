@@ -10,7 +10,6 @@
             <th scope="col">Alamat</th>
             <th scope="col">No Telepon</th>
             <th scope="col">Email</th>
-            <th scope="col">Kupon</th>
             <th scope="col">Pembayaran</th>
             <th scope="col">Status</th>
             <th scope="col">Actions</th>
@@ -22,7 +21,6 @@
             <td><?= $bayar['alamat']; ?></td>
             <td><?= $bayar['no_telp']; ?></td>
             <td><?= $bayar['email']; ?></td>
-            <td><?= $bayar['kupon']; ?></td>
             <td><?= $bayar['pembayaran']; ?></td>
             <td><?= $bayar['status']; ?></td>
             <td>

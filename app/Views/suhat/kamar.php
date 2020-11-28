@@ -264,8 +264,11 @@
                                     <input type="date" class="form-control" id="check_in" name="check_in" value="<?= old('check_in'); ?>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="check-out">Check-Out</label>
-                                    <input type="date" class="form-control" id="check-out" name="check_out" value="<?= old('check_out'); ?>">
+                                    <label for="check-out">Lama Menyewa</label> <br>
+                                    <input type="radio" name="jml_hari" value="1"> 1 Malam <br>
+                                    <input type="radio" name="jml_hari" value="1"> 1 Bulan <br>
+                                    <input type="radio" id="aktif" name="jml_hari" value="1">
+                                    <input type="number" id="jumlah" name="hari" style="width: 30px;"> Hari
                                 </div>
                                 <label for="type_kamar">Type Kamar</label><br>
                                 <center>
@@ -281,8 +284,6 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="form-group">
                         <label for="pembayaran"><br>Pembayaran</label>
                         <select class="form-control" id="pembayaran" name="pembayaran" value="<?= old('pembayaran'); ?>">
@@ -301,5 +302,13 @@
         </div>
     </div>
 </div>
+
+<!-- disable input type text 1-->
+<script>
+    var boxes = $('#aktif');
+    boxes.on('change', function() {
+        $('#jumlah').prop('disabled', !boxes.filter(':checked').length);
+    }).trigger('change');
+</script>
 
 <?= $this->endSection(); ?>
