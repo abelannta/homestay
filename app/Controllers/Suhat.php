@@ -10,7 +10,8 @@ class Suhat extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Suhat | Homestay'
+            'title' => 'Suhat | Homestay',
+            'gets' => $this->request->getVar('email')
         ];
         return view('suhat\home', $data);
     }

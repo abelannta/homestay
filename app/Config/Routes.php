@@ -37,6 +37,7 @@ $routes->get('/admin', 'Admin::index', ['filter' => 'role:admin']);
 $routes->get('/admin/verifikasi/(:segment)', 'Admin::verifikasi/$1', ['filter' => 'role:admin']);
 $routes->delete('/admin/detail/(:num)', 'Admin::delete/$1', ['filter' => 'role:admin']);
 $routes->get('/admin/detail/(:any)', 'Admin::detail/$1', ['filter' => 'role:admin']);
+$routes->get('/profile/(:any)', 'Pages::profile/$1');
 
 
 /**
