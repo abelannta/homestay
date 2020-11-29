@@ -113,7 +113,7 @@
               </div>
 
               <!-- EMAIL -->
-              <div class="bio-row" style="width: 400px;">
+              <div class="bio-row" style="width: 600px;">
                 <p><span>Email </span>: <?= $gets['email']; ?></p>
               </div>
 
