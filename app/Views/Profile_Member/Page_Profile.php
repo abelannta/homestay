@@ -1,19 +1,21 @@
 <?php $this->extend('layout/Profile_Template'); ?>
 <?php $this->section('content'); ?>
+
+
 <div class="bgs">
   <div class="wrapper d-flex align-items-stretch">
-    <nav id="sidebar">
+    <nav id="sidebar" class="active">
       <div class="p-4 pt-5">
-        <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(../assetsprofile/adminpage/images/logo.jpg);"></a>
+        <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/img/logo.jpg);"></a>
         <ul class="list-unstyled components mb-5">
           <li class="active">
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Homestay</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
               <li>
-                <a href="../Form_KamarSHT/Page_Kamar.php">Soekarno Hatta Indah Kost & Homestay</a>
+                <a href="/Suhat">Soekarno Hatta Indah Kost & Homestay</a>
               </li>
               <li>
-                <a href="#">Guest House Candi Panggung</a>
+                <a href="/Candi">Guest House Candi Panggung</a>
               </li>
             </ul>
           </li>
@@ -29,12 +31,69 @@
             </ul>
           </li>
           <li>
+            <a href="#">Bookingku</a>
+          </li>
+          <li>
+            <a data-toggle="modal" data-target="#formContact">Contact Us</a>
+          </li>
+          <li>
             <a href="#">About</a>
           </li>
         </ul>
 
       </div>
     </nav>
+
+    <!-- Modal Contact Us -->
+    <div class="modal fade" id="formContact" tabindex="-1" aria-labelledby="ContactUs" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <form action="/kontak/tambah" method="post">
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="form-group">
+                      <label for="nama">Nama</label>
+                      <input type="text" class="form-control" id="nama" name="nama" autofocus value="<?= user()->username; ?>">
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" autofocus value="<?= user()->email; ?>">
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    <div class="form-group">
+                      <label for="no_telp">No. Telepon</label>
+                      <input type="number" class="form-control" id="no_telp" name="no_telp" value="<?= user()->no_telp; ?>" autofocus>
+                    </div>
+                  </div>
+                </div>
+                <div class=" form-group">
+                  <label for="exampleFormControlTextarea1">Pesan</label>
+                  <textarea class="form-control" id="pesan" name="pesan" rows="8"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
@@ -44,7 +103,7 @@
             <i class="fa fa-bars"></i>
             <span class="sr-only">Toggle Menu</span>
           </button>
-          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars"></i>
           </button>
 

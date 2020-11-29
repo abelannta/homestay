@@ -117,11 +117,11 @@
                                         <div class="col-sm">
                                             <div class="form-group">
                                                 <label for="no_telp">No. Telepon</label>
-                                                <input type="number" class="form-control" id="no_telp" name="no_telp" autofocus>
+                                                <input type="number" class="form-control" id="no_telp" name="no_telp" value="<?= user()->no_telp; ?>" autofocus>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class=" form-group">
                                         <label for="exampleFormControlTextarea1">Pesan</label>
                                         <textarea class="form-control" id="pesan" name="pesan" rows="8"></textarea>
                                     </div>
