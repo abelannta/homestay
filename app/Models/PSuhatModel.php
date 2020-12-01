@@ -7,15 +7,22 @@ use CodeIgniter\Model;
 class PSuhatModel extends Model
 {
     protected $table = 'bayar';
-    protected $primaryKey = 'id_bayar';
     protected $useTimestamps = true;
-    protected $allowedFields = ['nama', 'alamat', 'no_telp', 'kupon', 'pembayaran', 'status'];
+    protected $allowedFields = ['id_cust', 'nama', 'alamat', 'email', 'no_telp', 'gambar', 'harga', 'pembayaran', 'bukti', 'status'];
 
     public function getBooking()
     {
         return $this->db->table('bayar')
             ->join('booking_kamar', 'bayar.id_bayar=booking_kamar.id_bayar')
             ->where('bayar.kondisi', "Booking")
+            ->get()->getResultArray();
+    }
+
+    public function getBookingku($id)
+    {
+        return $this->db->table('bayar')
+            ->join('booking_kamar', 'bayar.id_bayar=booking_kamar.id_bayar')
+            ->where('bayar.id_cust', $id)
             ->get()->getResultArray();
     }
 
@@ -49,6 +56,26 @@ class PSuhatModel extends Model
     {
         $data = [
             'status' => 'Dibayar'
+        ];
+        return $this->db->table('bayar')
+            ->where('id_bayar', $id_bayar)
+            ->update($data);
+    }
+
+    public function getUpload($id_bayar)
+    {
+        // mengambil gambar
+        $bukti = $this->request->getFile('bukti');
+
+        // pindahkan file ke folder img
+        $bukti->move('img/bukti');
+
+        // ambil nama
+        $namaBukti = $bukti->getName();
+        dd($namaBukti);
+
+        $data = [
+            'bukti' => $namaBukti
         ];
         return $this->db->table('bayar')
             ->where('id_bayar', $id_bayar)

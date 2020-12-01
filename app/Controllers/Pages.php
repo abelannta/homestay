@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Page_LoginModel;
-use App\Models\UserModel;
+use App\Models\UserModel1;
 use CodeIgniter\HTTP\Request;
 
 class Pages extends BaseController
@@ -12,7 +12,7 @@ class Pages extends BaseController
     protected $allowedFields = [];
     public function __construct()
     {
-        $this->userModel = new UserModel();
+        $this->userModel = new UserModel1();
     }
     public function index()
     {

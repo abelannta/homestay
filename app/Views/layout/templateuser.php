@@ -44,7 +44,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Bookingku</a>
+                        <a href="/bookingku">Bookingku</a>
                     </li>
                     <li>
                         <a data-toggle="modal" data-target="#formContact" href="#">Contact Us</a>
@@ -147,6 +147,38 @@
             <script src="/js/main.js"></script>
             <script src="/js/bootstrap.js"></script>
 
+            <script>
+                function previewImg() {
+                    const sampul = document.querySelector('#gambar');
+                    const sampulLabel = document.querySelector('.custom-file-label');
+                    const imgPreview = document.querySelector('.img-preview');
+
+                    sampulLabel.textContent = sampul.files[0].name;
+
+                    const fileSampul = new fileReader();
+                    fileSampul.readAsDataURL(sampul.files[0]);
+
+                    fileSampul.onload = function(e) {
+                        imgPreview.src = e.target.result;
+                    }
+                }
+            </script>
+            <script>
+                function previewImg1() {
+                    const sampul = document.querySelector('#bukti');
+                    const sampulLabel = document.querySelector('.custom-file-label');
+                    const imgPreview = document.querySelector('.img-preview');
+
+                    sampulLabel.textContent = sampul.files[0].name;
+
+                    const fileSampul = new fileReader();
+                    fileSampul.readAsDataURL(sampul.files[0]);
+
+                    fileSampul.onload = function(e) {
+                        imgPreview.src = e.target.result;
+                    }
+                }
+            </script>
             <?= $this->renderSection('footer'); ?>
 </body>
 
