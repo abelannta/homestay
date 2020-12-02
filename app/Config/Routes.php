@@ -32,6 +32,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+$routes->get('/bookingku/upload/(:any)', 'Bookingku::upload/$1');
 $routes->get('/', 'Admin::index', ['filter' => 'role:admin']);
 $routes->get('/admin', 'Admin::index', ['filter' => 'role:admin']);
 $routes->get('/admin/verifikasi/(:segment)', 'Admin::verifikasi/$1', ['filter' => 'role:admin']);
