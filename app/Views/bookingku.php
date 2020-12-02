@@ -27,9 +27,10 @@
                 <td><?php echo $byr['check_out']; ?></td>
                 <td><?php echo $byr['pembayaran']; ?></td>
                 <td><?php echo $byr['harga']; ?></td>
-                <td><img src="/img/<?= $byr['bukti']; ?>" style="width:100px"></td>
+                <td><img src="/img/data_booking/bukti/<?= $byr['bukti']; ?>" style="width:100px"></td>
                 <td>
-                    <form action="/bookingku/upload" method="post" enctype="multipart/form-data">
+                    <a href="/bookingku/upload/<?= $byr['id_bayar']; ?>" class="btn btn-success">Upload Bukti</a>
+                    <!-- <form action="/bookingku/upload" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             Upload Bukti Transfer (dalam format gambar)
                             <div class="custom-file">
@@ -39,7 +40,7 @@
                                 <label class="custom-file-label" for="bukti">Choose file</label>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
                     <!-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#formUpload">Upload Bukti</button> -->
                 </td>
             </tr>

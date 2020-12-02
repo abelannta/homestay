@@ -239,7 +239,10 @@
                                     <div class="col">
                                         <div class="form-group">
                                             <label for="check_in">Check-In</label>
-                                            <input type="date" class="form-control" id="check_in" name="check_in" value="<?= old('check_in'); ?>">
+                                            <input type="date" class="form-control <?= ($validation->hasError('check_in')) ? 'is-invalid' : ''; ?>" id="check_in" name="check_in" value="<?= old('check_in'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation->getError('check_in'); ?>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="jumlah_hari">Lama Menyewa (tulis angkanya saja)</label>

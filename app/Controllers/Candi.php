@@ -42,6 +42,12 @@ class Candi extends BaseController
             ],
             'gambar' => [
                 'rules' => 'is_image[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/png]'
+            ],
+            'check_in' => [
+                'rules' => 'required|is_unique[booking_kamar.check_in]|is_unique[booking_kamar.check_out]',
+                'errors' => [
+                    'is_unique' => 'tanggal yang dipilih sudah dibooking orang lain'
+                ]
             ]
         ])) {
             return redirect()->to('/Candi/kamar')->withInput();
@@ -51,7 +57,7 @@ class Candi extends BaseController
         $gambar = $this->request->getFile('gambar');
 
         // pindahkan file ke folder img
-        $gambar->move('img');
+        $gambar->move('img/data_booking/file_user');
 
         // ambil nama
         $namaGambar = $gambar->getName();
@@ -142,7 +148,7 @@ class Candi extends BaseController
             'check_out' => $checkout,
         ]);
 
-        session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan, cek halaman Bookingku');
         return redirect()->to('/candi/kamar');
     }
 }
