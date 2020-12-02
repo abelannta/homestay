@@ -1,7 +1,6 @@
 <?php $this->extend('layout/Profile_Template'); ?>
 <?php $this->section('content'); ?>
 
-
 <div class="bgs">
   <div class="wrapper d-flex align-items-stretch">
     <nav id="sidebar" class="active">
@@ -218,11 +217,14 @@
                   <form class="form-horizontal" role="form" action="/pages/edit/<?= $gets['id']; ?>" method="post">
                     <?= csrf_field(); ?>
                     <!-- NAMA -->
-                    <input type="hidden" name="emailku" value="<?= $gets['email']; ?>">
+                    <input type="hidden" name="idku" value="<?= $gets['id']; ?>">
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Nama</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control" name="namaku" placeholder=" " style="width: 50%;" value="<?= $gets['username']; ?>">
+                        <input type="text" class="form-control <?= ($validasi->hasError('namaku')) ? 'is-invalid' : ''; ?>" name="namaku" placeholder=" " style="width: 50%;" value="<?= $gets['username']; ?>">
+                        <div class="invalid-feedback">
+                          <?= $validasi->getError('namaku'); ?>
+                        </div>
                       </div>
                     </div>
 

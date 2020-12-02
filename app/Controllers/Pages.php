@@ -22,38 +22,42 @@ class Pages extends BaseController
         return view('Form_Login/Page_Login', $data);
     }
 
-    public function about()
-    {
-        $take = $this->userModel->findAll();
-        $data = [
-            'title' => 'Home',
-            'datas' => $take
-        ];
 
-        return view('pages/about', $data);
-    }
-    public function detail($email)
-    {
-
-        $data = [
-            'title' => 'Regist View',
-            'gets' => $this->userModel->getUser($email)
-
-        ];
-        return view('pages/home', $data);
-    }
     public function profile($receive)
     {
+        session();
         $take = $this->userModel->getUser($receive);
         $data = [
             'title' => 'Profile',
-            'gets' => $take
+            'gets' => $take,
+            'validasi' => \Config\Services::validation()
+
         ];
         return view('Profile_Member/Page_Profile', $data);
     }
     public function edit($id)
     {
-        $takes = $this->request->getVar('id');
+        $takes = $this->request->getVar('idku');
+        //validasi input 
+        $nama_lama = $this->userModel->getUser($takes);
+        if ($nama_lama['username'] == $this->request->getVar('namaku')) {
+            $rulers = 'required';
+        } else {
+            $rulers = 'required|is_unique[users.username]';
+        }
+        if (!$this->validate([
+            'namaku' => [
+                'rules' =>  $rulers,
+                'errors' => [
+                    'required' => 'Data Nama tidak boleh kosong',
+                    'is_unique' => 'Username telah terdaftar pada database'
+                ]
+            ]
+        ])) {
+            $validation =  \Config\Services::validation()->listErrors();
+            return redirect()->to("/profile/" . $takes)->withInput()->with('validasi', $validation);
+        }
+
         $this->userModel->save(
             [
                 'id' => $id,
@@ -62,7 +66,7 @@ class Pages extends BaseController
                 'no_telp' => $this->request->getVar('no_telpku')
             ]
         );
-        return redirect()->to("/profile/" . user()->id);
+        return redirect()->to("/profile/" . $takes);
     }
 
     public function register()
