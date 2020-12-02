@@ -16,8 +16,19 @@ class PSuhatModel extends Model
         return $this->db->table('bayar')
             ->join('booking_kamar', 'bayar.id_bayar=booking_kamar.id_bayar')
             ->where('bayar.kondisi', "Booking")
+            ->like('no_kamar', 'SHT')
             ->get()->getResultArray();
     }
+
+    public function getBookingCND()
+    {
+        return $this->db->table('bayar')
+            ->join('booking_kamar', 'bayar.id_bayar=booking_kamar.id_bayar')
+            ->where('bayar.kondisi', "Booking")
+            ->like('no_kamar', 'CND')
+            ->get()->getResultArray();
+    }
+
 
     public function getBookingku($id)
     {
@@ -38,6 +49,16 @@ class PSuhatModel extends Model
         return $this->db->table('bayar')
             ->join('booking_kamar', 'bayar.id_bayar=booking_kamar.id_bayar')
             ->where('bayar.kondisi', "Selesai")
+            ->like('no_kamar', 'SHT')
+            ->get()->getResultArray();
+    }
+
+    public function getSelesaiCND()
+    {
+        return $this->db->table('bayar')
+            ->join('booking_kamar', 'bayar.id_bayar=booking_kamar.id_bayar')
+            ->where('bayar.kondisi', "Selesai")
+            ->like('no_kamar', 'CND')
             ->get()->getResultArray();
     }
 
@@ -46,6 +67,17 @@ class PSuhatModel extends Model
         return $this->db->table('bayar')
             ->join('booking_kamar', 'bayar.id_bayar=booking_kamar.id_bayar')
             ->where('bayar.kondisi', "Selesai")
+            ->like('no_kamar', 'SHT')
+            ->like('nama', $keyword)
+            ->get()->getResultArray();
+    }
+
+    public function getSearchCND($keyword)
+    {
+        return $this->db->table('bayar')
+            ->join('booking_kamar', 'bayar.id_bayar=booking_kamar.id_bayar')
+            ->where('bayar.kondisi', "Selesai")
+            ->like('no_kamar', 'CND')
             ->like('nama', $keyword)
             ->get()->getResultArray();
     }
@@ -63,6 +95,16 @@ class PSuhatModel extends Model
     {
         $data = [
             'status' => 'Dibayar'
+        ];
+        return $this->db->table('bayar')
+            ->where('id_bayar', $id_bayar)
+            ->update($data);
+    }
+
+    public function getCheckout($id_bayar)
+    {
+        $data = [
+            'kondisi' => 'Selesai'
         ];
         return $this->db->table('bayar')
             ->where('id_bayar', $id_bayar)

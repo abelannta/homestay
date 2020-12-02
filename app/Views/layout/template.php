@@ -42,7 +42,7 @@
                                 <a href="/admin/candi">Pembayaran</a>
                             </li>
                             <li>
-                                <a href="#">Riwayat Pembayaran</a>
+                                <a href="/admin/riwayatCND">Riwayat Pembayaran</a>
                             </li>
                         </ul>
                     </li>

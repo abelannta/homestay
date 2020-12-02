@@ -12,6 +12,7 @@
             <th scope="col">Email</th>
             <th scope="col">Harga</th>
             <th scope="col">Pembayaran</th>
+            <th scope="col">Bukti</th>
             <th scope="col">Status</th>
             <th scope="col">Actions</th>
         </tr>
@@ -24,6 +25,7 @@
             <td><?= $bayar['email']; ?></td>
             <td><?= $bayar['harga']; ?></td>
             <td><?= $bayar['pembayaran']; ?></td>
+            <td><img src="/img/data_booking/bukti/<?= $bayar['bukti']; ?>" style="width:100px"></td>
             <td><?= $bayar['status']; ?></td>
             <td>
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#formVerif">Verifikasi</button>
