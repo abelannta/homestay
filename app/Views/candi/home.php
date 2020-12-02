@@ -38,30 +38,13 @@
         </div>
         <!-- Project Two Row-->
         <div class="row justify-content-center no-gutters">
-            <div class="col-lg-6"><img class="img-fluid" src="\img\suhat\kolam.jpg" alt="" /></div>
+            <div class="col-lg-6"><img class="img-fluid" src="\img\suhat\dapur.jpg" alt="" /></div>
             <div class="col-lg-6 order-lg-first">
                 <div class="bg-black text-center h-100 project">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left">
-                            <h4 class="text-white">Kolam Renang</h4>
-                            <p class="mb-0 text-white-50"> Anda bisa menggunakan kolam renang yang
-                                dapat anda nikmati dari pukul 06.00 - 20.00
-                            </p>
-                            <hr class="d-none d-lg-block mb-0 ml-0" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- row 3-->
-        <div class="row justify-content-center no-gutters">
-            <div class="col-lg-6"><img class="img-fluid" src="\img\suhat\dapur.jpg" alt="" /></div>
-            <div class="col-lg-6 ">
-                <div class="bg-black text-center h-100 project">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-left">
                             <h4 class="text-white">Dapur Bersama</h4>
-                            <p class="mb-0 text-white-50">Anda dapat menggunakan dapur untuk memenuhi
+                            <p class="mb-0 text-white-50"> Anda dapat menggunakan dapur untuk memenuhi
                                 kebutuhan pangan anda. Terdapat berbagai macam perlatan masak yang
                                 dapat digunakan
                             </p>

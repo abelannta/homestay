@@ -104,7 +104,7 @@
 						<div class="d-flex h-100">
 							<div class="project-text w-100 my-auto text-center text-lg-left">
 								<h4 class="text-white">Guest House Candi Panggung</h4>
-								<p class="mb-0 text-white-50"> Lawang dikenal sebagai kota peristirahatan sejak zaman penjajahan Belanda. Karena itu tidak mengherankan bila sampai saat ini masih banyak ditemui bangunan kuno bergaya Belanda di Lawang.Merupakan perbatasan kota malang.Cocok bagi anda yang ingin segera beristirahat setelah sampai di kabupaten malang.</p>
+								<p class="mb-0 text-white-50"> Candi Panggung merupakan daerah yang tidak jauh dari pusat Kota Malang. Anda dapat berpergian malam tanpa takut jalanan yang sepi. Anda juga dapat menemui banyak sekali toko-toko yang masih buka pada malam hari. Homestay Candi Panggung akan sangat cocok bila dipakai untuk berkumpul dengan teman teman.</p>
 								<hr class="d-none d-lg-block mb-0 ml-0" />
 								<br>
 								<a href="/candi">
@@ -134,6 +134,7 @@
 								<h4 class="text-uppercase m-0">Alamat</h4>
 								<hr class="my-4" />
 								<div class="small text-black-50">Jl.Suhat Malang,Jawa Timur</div>
+								<div class="small text-black-50">Jl. Simpang Candi Panggung, Mojolangu, Kec. Lowokwaru, Kota Malang, Jawa Timur</div>
 							</div>
 						</div>
 					</div>
