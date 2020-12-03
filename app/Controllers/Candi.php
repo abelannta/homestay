@@ -43,6 +43,12 @@ class Candi extends BaseController
             'gambar' => [
                 'rules' => 'is_image[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/png]'
             ],
+            'no_kamar' => [
+                'rules' => 'required'
+            ],
+            'jumlah_hari' => [
+                'rules' => 'required'
+            ],
             'check_in' => [
                 'rules' => 'required|is_unique[booking_kamar.check_in]|is_unique[booking_kamar.check_out]',
                 'errors' => [

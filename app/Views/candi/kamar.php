@@ -246,7 +246,10 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="jumlah_hari">Lama Menyewa (tulis angkanya saja)</label>
-                                            <input type="number" class="form-control" id="jumlah_hari" name="jumlah_hari" value="<?= old('jumlah_hari'); ?>" style="width: 70px;">
+                                            <input type="number" class="form-control <?= ($validation->hasError('jumlah_hari')) ? 'is-invalid' : ''; ?>" id="jumlah_hari" name="jumlah_hari" value="<?= old('jumlah_hari'); ?>" style="width: 70px;">
+                                            <div class="invalid-feedback">
+                                                <?= $validation->getError('jumlah_hari'); ?>
+                                            </div>
                                         </div>
                                         <label for="type_kamar">Type Kamar</label><br>
                                         <center>
