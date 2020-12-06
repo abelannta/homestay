@@ -303,7 +303,7 @@ class Admin extends BaseController
 
 
         $data['bayar'] = $query;
-        return view('admin\riwayat', $data);
+        return view('admin\riwayatCND', $data);
     }
 
     public function print()

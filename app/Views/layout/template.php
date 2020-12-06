@@ -47,9 +47,6 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/admin/logs">Logs</a>
-                    </li>
-                    <li>
                         <a href="/admin/contact">Keluhan</a>
                     </li>
                 </ul>

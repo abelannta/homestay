@@ -9,7 +9,7 @@ class PSuhatModel extends Model
     protected $table = 'bayar';
     protected $primaryKey = 'id_bayar';
     protected $useTimestamps = true;
-    protected $allowedFields = ['id_cust', 'nama', 'alamat', 'email', 'no_telp', 'gambar', 'harga', 'pembayaran', 'bukti', 'status'];
+    protected $allowedFields = ['id_cust', 'nama', 'alamat', 'email', 'no_telp', 'gambar', 'harga', 'pembayaran', 'bukti', 'status', 'updated_at'];
 
     public function getBooking()
     {
