@@ -9,8 +9,13 @@ class Admin extends BaseController
 {
     public function index()
     {
+
+        $tambahBooking = new \App\Models\tambahBooking();
         $data = [
-            'title' => 'Home | Admin Homestay'
+            'title' => 'Home | Admin Homestay',
+            'totalSHT' => $tambahBooking->getTotalSHT(),
+            'totalCND' => $tambahBooking->getTotalCND(),
+            'totalAll' => $tambahBooking->getTotalAll()
         ];
         return view('admin\home', $data);
     }
