@@ -29,7 +29,10 @@ class Candi extends BaseController
         //validasi
         if (!$this->validate([
             'username' => [
-                'rules' => 'required'
+                'rules' => 'required|alpha',
+                'errors' => [
+                    'alpha' => 'username tidak boleh mengandung selain huruf'
+                ]
             ],
             'alamat' => [
                 'rules' => 'required'
