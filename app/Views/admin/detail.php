@@ -28,7 +28,7 @@
             <td><img src="/img/data_booking/bukti/<?= $bayar['bukti']; ?>" style="width:100px"></td>
             <td><?= $bayar['status']; ?></td>
             <td>
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#formVerif">Verifikasi</button>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#formVerif" <?php if ($bayar['bukti'] == 'default.png') { ?>disabled<?php } ?>>Verifikasi</button>
                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#formHapus">Check Out</button>
             </td>
         </tr>
