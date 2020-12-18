@@ -45,12 +45,12 @@
                         <td><?php echo $byr['created_at']; ?></td>
                         <td><?php echo $byr['updated_at']; ?></td>
                         <td>
-                            <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#formDelete">Delete</button>
+                            <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#formDelete<?= $byr['id_bayar']; ?>">Delete</button>
                         </td>
                     </tr>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="formDelete" tabindex="-1" aria-labelledby="judulDelete" aria-hidden="true">
+                    <div class="modal fade" id="formDelete<?= $byr['id_bayar']; ?>" tabindex="-1" aria-labelledby="judulDelete" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
